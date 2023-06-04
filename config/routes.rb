@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   registrations: 'users/registrations'
   }
   root to: "home#index"
+  resources :users, only: [:show, :edit, :update]
   resources :rooms
   resources :reservations
 end
