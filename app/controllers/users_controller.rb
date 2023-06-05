@@ -6,11 +6,22 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  def edit
-
+  def profile
+    @user = current_user
   end
 
-  def update
+  def edit_profile
+    @user = current_user
+  end
+
+  def update_profile
+    @user = current_user
+    if @user.update(user_params)
+      flash[:notice] = "プロフィールが更新されました"
+      redirect_to user_path(@user)
+    else
+      render :edit
+    end
   end
 
   private

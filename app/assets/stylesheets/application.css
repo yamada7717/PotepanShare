@@ -14,6 +14,17 @@
  *= require_self
  */
 
+ol,
+ul {
+  list-style: none;
+}
+
+li,
+dd {
+  list-style-type: none;
+}
+
+
 .header_nav {
   background-color: #1c1d3b;
 }
@@ -83,4 +94,98 @@
   color: #fff;
   text-align: center;
   padding-top: 100px;
+}
+
+.profile_title {
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.profile_edit {
+  display: block;
+  color: #1c1d3b;
+  font-size: 25px;
+  margin-right: 100px;
+  text-align: end;
+}
+
+.side_link {
+  padding-left: 10px;
+}
+
+.side_aria {
+  margin-left: 50px;
+  padding: 15px 40px 15px 40px;
+}
+
+.profile_link {
+  display: block;
+  color: #1c1d3b;
+  padding: 20px 40px 20px 40px;
+  border: 1px solid #DFE2E6;
+}
+
+.profile_aria {
+  margin-left: 80px;
+}
+
+.profile_user_image {
+  height: 50px;
+  text-decoration: none;
+  padding: 0 30px 5px 30px;
+}
+
+.profile_image {
+  margin-top: 15px;
+}
+
+.profile_label {
+  margin-top: 7px;
+  margin-right: 40px;
+}
+
+.profile_name {
+  margin-top: 7px;
+  margin-left: 30px;
+}
+
+.profile_bio {
+  margin-top: 7px;
+}
+
+.hidden {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.update_aria {
+  margin-top: 10px;
+}
+
+.update_btn {
+  margin-left: 30px;
+}
+
+.account_edit {
+  margin-left: 110px;
+}
+
+.account_title {
+  margin-bottom: 15px;
+}
+
+.account_email {
+  margin-left: 30px;
+}
+
+.account_password {
+  margin-left: 60px;
 }
