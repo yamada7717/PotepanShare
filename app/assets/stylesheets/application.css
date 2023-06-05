@@ -132,7 +132,7 @@ dd {
 .profile_user_image {
   height: 50px;
   text-decoration: none;
-  padding: 0 30px 5px 30px;
+  padding: 0 30px 5px 40px;
 }
 
 .profile_image {
@@ -140,7 +140,7 @@ dd {
 }
 
 .profile_label {
-  margin-top: 7px;
+  margin-top: 10px;
   margin-right: 40px;
 }
 
