@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
   resources :rooms
   resources :reservations
+  get "/search", to: "rooms#search"
 end

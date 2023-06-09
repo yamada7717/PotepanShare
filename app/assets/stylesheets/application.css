@@ -24,6 +24,85 @@ dd {
   list-style-type: none;
 }
 
+/* 検索 */
+.search_form {
+  margin-top: 80px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search_box {
+  padding: 30px;
+}
+
+.aria_top_title {
+  font-size: 40px;
+  line-height: 66px;
+  width: 400px;
+  border-bottom: 4px solid #ff7757;
+  margin-top: 100px;
+  margin-bottom: 140px;
+  padding-bottom: 15px;
+}
+
+.area_links {
+  margin: 100px 0 200px 0;
+  text-decoration: none;
+}
+
+.area_links>.area_link {
+  text-decoration: none;
+}
+
+.tokyo {
+  background-image: url('tokyo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
+.osaka {
+  background-image: url('osaka.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
+.kyoto {
+  background-image: url('kyoto.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
+.sapporo {
+  background-image: url('sapporo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
 .util_btn {
   margin: 10px 0 10px 0;
 }
@@ -45,7 +124,6 @@ dd {
   height: 800px;
   background-color: #1c1d3b;
 }
-
 
 .footer_logo {
   margin-top: 200px;
@@ -109,6 +187,10 @@ dd {
   color: #fff;
   text-align: center;
   padding-top: 100px;
+}
+
+.top_title>h2 {
+  font-size: 80px;
 }
 
 .profile_title {

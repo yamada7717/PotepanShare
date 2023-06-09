@@ -25,12 +25,24 @@ class RoomsController < ApplicationController
   end
 
   def update
+    @room = Room.find(params[:id])
+    if @room = @room.update(room_params)
+      redirect_to :rooms
+    else
+      render :edit
+    end
   end
 
   def destroy
     @room = Room.find(params[:id])
     @room.destroy
     redirect_to rooms_path
+  end
+
+  def search
+    @query = params[:query]
+    @results = Room.where("address LIKE :query", query: "%#{@query}%")
+    @room_count = Room.count
   end
 
   private
