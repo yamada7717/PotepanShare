@@ -5,12 +5,12 @@
     <table class="table ">
       <thead>
         <tr>
-          <th scope="col">施設写真</th>
-          <th scope="col">施設名</th>
-          <th scope="col">施設住所</th>
-          <th scope="col">施設紹介</th>
-          <th scope="col">料金</th>
-          <th scope="col">作成日</th>
+          <th scope="col" class="room_header">施設写真</th>
+          <th scope="col" class="room_header">施設名</th>
+          <th scope="col" class="room_header">施設住所</th>
+          <th scope="col" class="room_header">施設紹介</th>
+          <th scope="col" class="room_header">料金</th>
+          <th scope="col" class="room_header">作成日</th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +24,7 @@
             <td><%= room.room_name %></td>
             <td><%= room.address %></td>
             <td><%= room.room_detail %></td>
-            <td><%= room.price %></td>
+            <td><%= number_with_delimiter(room.price) %></td>
             <td><%= room.created_at %></td>
             <td>
               <div class="btn-group dropright">

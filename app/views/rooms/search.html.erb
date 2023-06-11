@@ -2,7 +2,7 @@
 <%= render "shared/search"%>
 
 <div class="container">
-  <p><%= @room_count %>件が見つかりました</p>
+  <p><%= @results.count %>件が見つかりました</p>
   <ul class="row">
     <% @results.each do |room| %>
       <li class="col-sm">
@@ -12,9 +12,10 @@
         <div class="room_wrapper">
             <p><%= room.room_name %></p>
             <p><%= room.address %></p>
-          <p> <%= room.room_detail %></p>
+            <p><%= room.room_detail %></p>
           <div class="room_footer">
-            <p><%= room.price %></p>
+            <p>¥<%= number_with_delimiter(room.price) %>〜</p>
+            <%= link_to "詳細ページ", new_reservation_path(room_id: room.id), class: "reservation-link" %>
           </div>
         </div>
       </li>

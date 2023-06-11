@@ -26,8 +26,8 @@ dd {
 
 /* 検索 */
 .search_form {
-  margin-top: 80px;
-  width: 50%;
+  margin-top: 50px;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -302,7 +302,29 @@ dd {
   height: 70px;
 }
 
+.edit_room_image {
+  height: 200px;
+  width: 150px;
+}
+
+.room_header {
+  font-size: 20px;
+}
+
 .form_control_image {
   display: block;
   width: 14%;
+}
+
+/* 予約フォーム */
+.reserve_image {
+  height: 220px;
+}
+
+.room_date_list {
+  padding-left: 15px;
+}
+
+.number_form {
+  width: 10%;
 }
