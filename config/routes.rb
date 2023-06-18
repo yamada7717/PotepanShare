@@ -10,7 +10,17 @@ Rails.application.routes.draw do
       patch :update_profile
     end
   end
-  resources :rooms
-  resources :reservations
+
+  resources :rooms do
+  resources :reservations, only: [:new, :create]
+  end
+
+  resources :reservations do
+      collection do
+      post :confirmation
+    end
+  end
+
+
   get "/search", to: "rooms#search"
 end

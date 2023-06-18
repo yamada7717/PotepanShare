@@ -40,8 +40,19 @@ class RoomsController < ApplicationController
   end
 
   def search
-    @query = params[:query]
-    @results = Room.where("address LIKE :query", query: "%#{@query}%")
+    if params[:area].present? && params[:query].present?
+    # エリアとフリーワードの両方を検索する場合
+    @rooms = Room.where("address LIKE :area OR room_name LIKE :query OR room_detail LIKE :query",area: "%#{params[:area]}%", query: "%#{params[:query]}%")
+    elsif params[:area].present?
+      # エリアのみを検索する場合
+      @rooms = Room.where("address LIKE ?", "%#{params[:area]}%")
+    elsif params[:query].present?
+      # フリーワードのみを検索する場合
+      @rooms = Room.where("room_name LIKE :query OR room_detail LIKE :query", query: "%#{params[:query]}%")
+    else
+        # エリアとフリーワードのどちらも指定されていない場合、全ての施設を表示
+        @rooms = Room.all
+    end
     @room_count = Room.count
   end
 
