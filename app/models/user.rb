@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :validatable
+
+  validates :user_name, presence: true
   #ユーザーイメージの追加
   has_many :rooms
   has_many :reservations
