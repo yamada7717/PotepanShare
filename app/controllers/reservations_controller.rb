@@ -34,7 +34,7 @@ class ReservationsController < ApplicationController
     if @reservation.valid?
       render :confirmation
     else
-      flash[:alert] = "入力内容を確認してください"
+      flash[:notice] = "入力内容を確認してください"
       render :new
     end
   end
