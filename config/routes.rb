@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :rooms do
-  resources :reservations, only: [:new, :create]
+  resources :reservations, only: [:new, :create,:confirmation]
   end
 
   resources :reservations do

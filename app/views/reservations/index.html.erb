@@ -1,11 +1,11 @@
 <%= render "shared/header"%>
 <div class="container">
   <h2 class="">予約済み施設の一覧</h2>
-   <% if flash[:notice] %>
-    <div class="flash-message notice">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
+    <% if flash[:notice] %>
+      <div class="flash-message notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
   <%= link_to "戻る", :back, class: "btn" %>
   <div class="room_aria">
     <table class="table ">
@@ -28,7 +28,7 @@
                 <%= image_tag reservation.room.room_image, class: 'room_image' %>
               <% end %>
             </th>
-            <td><%= reservation.room.room_name %></td>
+            <td><%= link_to reservation.room.room_name, new_room_reservation_path(reservation.room) %></td>
             <td><%= reservation.room.room_detail %></td>
             <td><%= number_with_delimiter(reservation.total_price) %></td>
             <td><%= reservation.start_date.strftime("%Y/%m/%d") %></td>

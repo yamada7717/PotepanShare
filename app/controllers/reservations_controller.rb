@@ -28,10 +28,13 @@ class ReservationsController < ApplicationController
 
   def confirmation
     @room = Room.find(params[:reservation][:room_id])
-    @reservation = Reservation.new(reservation_params)
+    @reservation = current_user.reservations.new(reservation_params)
     @reservation.room = @room
 
     if @reservation.valid?
+      render :confirmation
+    else
+      flash[:alert] = "入力内容を確認してください"
       render :new
     end
   end
