@@ -20,6 +20,8 @@
             <th scope="row">
               <% if room.room_image.attached? %>
                 <%= image_tag room.room_image, class: 'room_image' %>
+              <% else %>
+                <%= image_tag 'default-room-image.png', class: 'room_image' %>
               <% end %>
             </th>
             <td><%= link_to room.room_name, new_room_reservation_path(room), class: "reservation-link" %></td>

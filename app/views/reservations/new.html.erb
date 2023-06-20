@@ -9,7 +9,9 @@
   <div class="room_date_wrapper">
     <div class="d-flex">
       <% if @room.room_image.attached? %>
-        <%= image_tag @room.room_image, class: 'reserve_image' %>
+          <%= image_tag @room.room_image, class: 'reserve_image' %>
+        <% else %>
+          <%= image_tag 'default-room-image.png', class: 'reserve_image' %>
       <% end %>
       <div class="room_date_list">
         <div>

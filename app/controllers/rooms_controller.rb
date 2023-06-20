@@ -20,6 +20,7 @@ class RoomsController < ApplicationController
       if @room.save
         redirect_to :rooms
       else
+        flash[:notice] = "入力内容を確認してください"
         render :new
       end
   end
@@ -29,6 +30,7 @@ class RoomsController < ApplicationController
     if @room = @room.update(room_params)
       redirect_to :rooms
     else
+      flash[:notice] = "入力内容を確認してください"
       render :edit
     end
   end

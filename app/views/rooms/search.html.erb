@@ -7,7 +7,9 @@
     <% @rooms.each do |room| %>
       <li class="col-sm">
         <% if room.room_image.attached? %>
-          <%= image_tag room.room_image, class: 'room_image' %>
+            <%= image_tag room.room_image, class: 'room_image' %>
+          <% else %>
+            <%= image_tag 'default-room-image.png', class: 'room_image' %>
         <% end %>
         <div class="room_wrapper">
             <p><%= room.room_name %></p>
