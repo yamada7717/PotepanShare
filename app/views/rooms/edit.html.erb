@@ -1,0 +1,38 @@
+<%= render "shared/header"%>
+<div class="container">
+  <h2 class="room_title">施設の編集</h2>
+  <%= form_with model: @room, url: room_path(@room), method: :patch, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :room_name, "施設名" %>
+      <%= f.text_field :room_name, class: "form-control", value: @room.room_name %>
+    </div>
+    <div class="form-group">
+      <%= f.label :address, "施設住所" %>
+      <%= f.text_field :address, class: "form-control", value: @room.address %>
+    </div>
+    <div class="form-group">
+      <%= f.label :room_detail, "施設の詳細"%>
+      <%= f.text_area :room_detail, class: "form-control", value: @room.room_detail %>
+    </div>
+    <div class="form-group">
+      <%= f.label :price, "施設の値段" %>
+      <%= f.number_field :price, class: "form-control", value: @room.price %>
+    </div>
+    <div class="form-group">
+      <%= f.label :room_image, class: 'custom-file-upload form_control_image' do %>
+          <span>施設の写真を登録</span>
+        <%= f.file_field :room_image, class: 'hidden' %>
+      <% end %><br>
+      <% if @room.room_image.attached? %>
+        <div class="current-image">
+          <%= image_tag @room.room_image, class: 'edit_room_image' %>
+        </div>
+      <% end %>
+    </div>
+    <div class="util_btn">
+      <%= link_to "キャンセル", :back, class: "btn" %>
+      <%= f.submit "更新", class: "btn" %>
+    </div>
+  <% end %>
+</div>
+<%= render "shared/footer"%>

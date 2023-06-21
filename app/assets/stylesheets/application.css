@@ -13,3 +13,318 @@
  *= require_tree .
  *= require_self
  */
+
+ol,
+ul {
+  list-style: none;
+}
+
+li,
+dd {
+  list-style-type: none;
+}
+
+/* 検索 */
+.search_form {
+  margin-top: 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search_box {
+  padding: 30px;
+}
+
+.aria_top_title {
+  font-size: 40px;
+  line-height: 66px;
+  width: 400px;
+  border-bottom: 4px solid #ff7757;
+  margin-top: 100px;
+  margin-bottom: 140px;
+  padding-bottom: 15px;
+}
+
+.area_links {
+  margin: 100px 0 200px 0;
+  text-decoration: none;
+}
+
+.area_links>.area_link {
+  text-decoration: none;
+}
+
+.tokyo {
+  background-image: url('tokyo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
+.osaka {
+  background-image: url('osaka.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
+.kyoto {
+  background-image: url('kyoto.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
+.sapporo {
+  background-image: url('sapporo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 245px;
+  margin: 0 10px 0 10px;
+  border-radius: 5%;
+  color: #fff;
+  padding: 5px;
+}
+
+.util_btn {
+  margin: 10px 0 10px 0;
+}
+
+.header_nav {
+  background-color: #1c1d3b;
+}
+
+.header_logo {
+  width: 200px;
+  margin-left: 200px;
+}
+
+.header_menu {
+  margin-left: auto;
+}
+
+.footer_aria {
+  height: 800px;
+  background-color: #1c1d3b;
+}
+
+.footer_logo {
+  margin-top: 200px;
+  width: 400px;
+  margin-left: 200px;
+}
+
+/* ログイン時 */
+.user_action {
+  margin-right: 200px;
+}
+
+.user_action:hover {
+  cursor: pointer;
+}
+
+.user_image {
+  height: 50px;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.user_name {
+  color: #fff;
+  font-size: 20px;
+  line-height: 50px;
+  padding-left: 5px;
+}
+
+/* -------------- */
+
+/* 非ログイン時 */
+.login_link {
+  padding: 10px;
+  margin-left: auto;
+  color: #fff;
+}
+
+/* -------------- */
+
+.dropdown_link {
+  color: #1c1d3b;
+  text-decoration: none;
+}
+
+
+.new_user_link {
+  margin-left: 10px;
+  margin-right: 140px;
+  color: #fff;
+}
+
+.top_view {
+  height: 700px;
+  background-image: url('cover-lg.jpg');
+  background-position: 50%;
+  background-size: cover;
+}
+
+.top_title {
+  color: #fff;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.top_title>h2 {
+  font-size: 80px;
+}
+
+.profile_title {
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.profile_edit {
+  display: block;
+  color: #1c1d3b;
+  font-size: 25px;
+  margin-right: 100px;
+  text-align: end;
+}
+
+.side_link {
+  padding-left: 10px;
+}
+
+.side_aria {
+  margin-left: 50px;
+  padding: 15px 40px 15px 40px;
+}
+
+.profile_link {
+  display: block;
+  color: #1c1d3b;
+  padding: 20px 40px 20px 40px;
+  border: 1px solid #DFE2E6;
+}
+
+.profile_aria {
+  margin-left: 80px;
+}
+
+.profile_user_image {
+  height: 50px;
+  text-decoration: none;
+  padding: 0 30px 5px 40px;
+}
+
+.profile_image {
+  margin-top: 15px;
+}
+
+.profile_label {
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.profile_name {
+  margin-top: 7px;
+  margin-left: 30px;
+}
+
+.profile_bio {
+  margin-top: 7px;
+}
+
+.hidden {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.update_aria {
+  margin-top: 10px;
+}
+
+.update_btn {
+  margin-left: 30px;
+}
+
+.account_edit {
+  margin-left: 110px;
+}
+
+.account_title {
+  margin-bottom: 15px;
+}
+
+.account_email {
+  margin-left: 30px;
+}
+
+.account_password {
+  margin-left: 60px;
+}
+
+/* 施設の新規登録 */
+
+.room_title {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.room_aria {
+  margin-bottom: 100px;
+}
+
+.room_image {
+  height: 70px;
+}
+
+.edit_room_image {
+  height: 200px;
+  width: 150px;
+}
+
+.room_header {
+  font-size: 20px;
+}
+
+.form_control_image {
+  display: block;
+  width: 14%;
+}
+
+/* 予約フォーム */
+.reserve_image {
+  height: 220px;
+}
+
+.room_date_list {
+  padding-left: 15px;
+}
+
+.number_form {
+  width: 10%;
+}
