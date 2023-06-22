@@ -34,8 +34,8 @@ class ReservationsController < ApplicationController
     if @reservation.valid?
       render :confirmation
     else
-      flash[:notice] = "入力内容を確認してください"
-      render :new
+      flash[:alert] = "入力内容の確認をしてください"
+      redirect_to new_reservation_path(room_id: @room.id)
     end
   end
 

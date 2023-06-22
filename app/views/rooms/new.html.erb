@@ -2,9 +2,9 @@
 <%= render "shared/header" %>
 <div class="container">
   <h2 class="room_title">施設の新規登録</h2>
-    <% if flash[:notice] %>
+    <% if flash[:alert] %>
       <div class="flash-message notice">
-        <%= flash[:notice] %>
+        <%= flash[:alert] %>
       </div>
     <% end %>
   <div class="room_aria">

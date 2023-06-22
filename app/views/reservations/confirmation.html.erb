@@ -14,6 +14,6 @@
     <%= f.hidden_field :room_id, value: @room.id %>
     <%= f.submit "予約する", class: "reservation-link" %>
   <% end %>
-<%= link_to "キャンセル", :back, class: "btn" %>
+<%= link_to "キャンセル", new_reservation_path(room_id: @room.id), class: "btn" %>
 </div>
 <%= render "shared/footer" %>
