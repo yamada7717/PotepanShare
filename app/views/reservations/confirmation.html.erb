@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+<div class="container">
+  <h2>予約確認</h2>
+  <p>チェックイン日: <%= @reservation.start_date.strftime("%Y/%m/%d") %></p>
+  <p>チェックアウト日: <%= @reservation.end_date.strftime("%Y/%m/%d") %></p>
+  <p>予約人数: <%= @reservation.number_of_people %></p>
+  <p>支払い金額: ¥<%= @reservation.total_price %></p>
+
+  <%= form_with model: @reservation, url: reservations_path do |f| %>
+    <%= f.hidden_field :start_date, value: @reservation.start_date %>
+    <%= f.hidden_field :end_date, value: @reservation.end_date %>
+    <%= f.hidden_field :number_of_people, value: @reservation.number_of_people %>
+    <%= f.hidden_field :total_price, value: @reservation.total_price %>
+    <%= f.hidden_field :room_id, value: @room.id %>
+    <%= f.submit "予約する", class: "reservation-link" %>
+  <% end %>
+<%= link_to "キャンセル", :back, class: "btn" %>
+</div>
+<%= render "shared/footer" %>
