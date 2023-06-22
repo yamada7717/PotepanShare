@@ -4,6 +4,12 @@ class ReservationsController < ApplicationController
     @reservations = current_user.reservations
   end
 
+
+  def show
+    @rooms =Room.all
+  end
+
+
   def new
     @room = Room.find(params[:room_id])
     @reservation = Reservation.new
