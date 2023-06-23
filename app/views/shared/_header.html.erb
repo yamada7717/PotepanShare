@@ -1,0 +1,27 @@
+<header>
+  <nav class="navbar Navbar header_nav">
+    <div class="container-fluid">
+      <a href="/" class="" ><img src="<%= asset_path 'logo.png' %>" alt="ホームページのロゴ画像" class="header_logo"></a>
+      <% if user_signed_in? %>
+      <div class="dropdown header_menu">
+        <div class="dropdown-toggle d-flex  user_action" id="dropdownMenuButton" data-toggle="dropdown">
+          <%= image_tag(current_user.user_image.attached? ? url_for(current_user.user_image) : 'default-avatar.png', class: 'user_image') %>
+          <div class="user_name"><%= current_user.user_name %></div>
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><%= link_to '施設の新規登録', new_room_path, class:'dropdown_link' %></li>
+          <li><%= link_to '予約済み一覧', reservations_path, class:'dropdown_link' %></li>
+          <li><%= link_to '登録済み一覧', rooms_path, class:'dropdown_link' %></li>
+          <li><%= link_to 'アカウント設定', user_path(current_user), class:'dropdown_link' %></li>
+          <li>
+          <%= link_to 'ログアウト', destroy_user_session_path, class:'dropdown_link', method: :delete %>
+          </li>
+        </ul>
+      </div>
+      <% else %>
+        <%= link_to "ログイン", new_user_session_path, class:'login_link' %>
+        <%= link_to "新規登録", new_user_registration_path, class:'new_user_link' %>
+      <% end %>
+    </div>
+  </nav>
+</header>
